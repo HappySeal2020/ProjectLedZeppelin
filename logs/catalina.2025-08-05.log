@@ -1,0 +1,40 @@
+05-Aug-2025 18:55:59.422 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Имя версии сервера:    Apache Tomcat/10.1.42
+05-Aug-2025 18:55:59.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Сервер собран:         Jun 5 2025 22:35:46 UTC
+05-Aug-2025 18:55:59.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Номер версии сервера:  10.1.42.0
+05-Aug-2025 18:55:59.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+05-Aug-2025 18:55:59.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Версия ОС:             10.0
+05-Aug-2025 18:55:59.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Архитектура:           amd64
+05-Aug-2025 18:55:59.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot
+05-Aug-2025 18:55:59.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Версия JVM:            21.0.5+11-LTS
+05-Aug-2025 18:55:59.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Производитель JVM:     Eclipse Adoptium
+05-Aug-2025 18:55:59.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Users\Phantom_Us\Documents\Java\Javarush\Project\ProjectLedZeppelin
+05-Aug-2025 18:55:59.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\DevTools\ApacheTomcat
+05-Aug-2025 18:55:59.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Aug-2025 18:55:59.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Aug-2025 18:55:59.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Aug-2025 18:55:59.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Aug-2025 18:55:59.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Aug-2025 18:55:59.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\DevTools\ApacheTomcat
+05-Aug-2025 18:55:59.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Users\Phantom_Us\Documents\Java\Javarush\Project\ProjectLedZeppelin
+05-Aug-2025 18:55:59.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Users\Phantom_Us\Documents\Java\Javarush\Project\ProjectLedZeppelin\temp
+05-Aug-2025 18:55:59.464 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Users\Phantom_Us\Documents\Java\Javarush\Project\ProjectLedZeppelin\conf\logging.properties
+05-Aug-2025 18:55:59.464 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Aug-2025 18:55:59.464 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.1.1\lib\idea_rt.jar=62605
+05-Aug-2025 18:55:59.464 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+05-Aug-2025 18:55:59.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+05-Aug-2025 18:55:59.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+05-Aug-2025 18:55:59.473 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.6].
+05-Aug-2025 18:55:59.487 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.5.0 8 Apr 2025]
+05-Aug-2025 18:56:00.093 INFO [main] org.apache.coyote.AbstractProtocol.init Инициализация ProtocolHandler ["http-nio-8080"]
+05-Aug-2025 18:56:00.144 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1092] milliseconds
+05-Aug-2025 18:56:00.223 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Aug-2025 18:56:00.223 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.42]
+05-Aug-2025 18:56:00.241 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Users\Phantom_Us\Documents\Java\Javarush\Project\ProjectLedZeppelin\conf\Catalina\localhost\ROOT.xml]
+05-Aug-2025 18:56:02.039 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Aug-2025 18:56:02.176 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Users\Phantom_Us\Documents\Java\Javarush\Project\ProjectLedZeppelin\conf\Catalina\localhost\ROOT.xml] has finished in [1 931] ms
+05-Aug-2025 18:56:02.184 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Aug-2025 18:56:02.217 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2071] milliseconds
+05-Aug-2025 19:01:28.256 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Aug-2025 19:01:28.261 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Aug-2025 19:01:28.276 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Aug-2025 19:01:28.285 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
