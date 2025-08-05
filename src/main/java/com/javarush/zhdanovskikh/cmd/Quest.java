@@ -3,16 +3,25 @@ package com.javarush.zhdanovskikh.cmd;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 
 public class Quest implements Command{
+    @Getter
     private int step=0;
+    @Setter
+    @Getter
     private int maxStep=Integer.MAX_VALUE;
     private boolean questFailed=false;
+    @Setter
+    @Getter
     private int btn1Result;
+    @Setter
+    @Getter
     private int btn2Result;
 
     @Override
@@ -48,7 +57,7 @@ public class Quest implements Command{
         String button2 = req.getParameter("Btn2");
         if ((button1 == null && getBtn1Result()>0) || (button2 == null && getBtn2Result()>0))  {
             setQuestFailed();
-        } else {incStep();};
+        } else {incStep();}
         return getView();
     }
 
@@ -57,7 +66,7 @@ public class Quest implements Command{
         //load quest from json
         ServletContext context = request.getServletContext();
         QuestData result = new QuestData();
-        String rp="";
+        String rp;
         rp = context.getRealPath("/");
         File prevFile1 = new File(rp);
         String prevDirectory1 = prevFile1.getParent();
@@ -81,17 +90,9 @@ public class Quest implements Command{
         return result;
     }
 
-    public int getStep(){return this.step;}
     public void incStep(){if (this.step < getMaxStep()) this.step = step+1;}
 
-    public int getMaxStep(){return this.maxStep;}
-    public void setMaxStep(int value){this.maxStep = value;}
-    public boolean getQuestFailed(){return this.questFailed;}
     public void setQuestFailed(){this.questFailed = true;}
-    public int getBtn1Result(){return this.btn1Result;}
-    public void setBtn1Result(int value){this.btn1Result = value;}
-    public int getBtn2Result(){return this.btn2Result;}
-    public void setBtn2Result(int value){this.btn2Result = value;}
 
 
 }

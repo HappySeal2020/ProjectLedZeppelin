@@ -29,7 +29,7 @@ public class FrontController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Command command = httpResolver.resolve(req);
         String redirect = command.doPost(req);
         resp.sendRedirect(redirect);
