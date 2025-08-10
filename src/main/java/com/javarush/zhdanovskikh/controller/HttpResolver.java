@@ -7,12 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 public class HttpResolver {
 
     public Command resolve(HttpServletRequest request) {
-        //   /cmd-example
         try {
             String requestURI = request.getRequestURI();
             requestURI = requestURI.equals("/") ? "/start-page" : requestURI;
-            //requestURI = "/start-page   ";
-
             String kebabName = requestURI.split("[?#/]")[1];
             String simpleName = convertKebabStyleToCamelCase(kebabName);
             String fullName = Command.class.getPackageName() + "." + simpleName;

@@ -3,6 +3,7 @@ package com.javarush.zhdanovskikh.cmd;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,11 +12,14 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 public class Quest implements Command{
+
     @Getter
     private int step=0;
     @Setter
     @Getter
     private int maxStep=Integer.MAX_VALUE;
+    @Getter
+    @Setter
     private boolean questFailed=false;
     @Setter
     @Getter
@@ -24,13 +28,16 @@ public class Quest implements Command{
     @Getter
     private int btn2Result;
 
+    final int VALID=1;
+    final int INVALID=0;
+
     @Override
     public String doGet(HttpServletRequest req) {
         QuestData questData = new QuestData();
         String clientIp = req.getRemoteAddr();
         if (questFailed ) {
-            questData.setBtn1Result(0);
-            questData.setBtn2Result(0);
+            questData.setBtn1Result(INVALID);
+            questData.setBtn2Result(INVALID);
             questData.setStepDescription(String.format("Тест пройден НЕУСПЕШНО. Правильных шагов: %d  Всего шагов: %d"+
                     "<br> Client IP: %s", step, maxStep, clientIp));
             req.setAttribute("questData",questData);
@@ -55,9 +62,19 @@ public class Quest implements Command{
     public String doPost(HttpServletRequest req) {
         String button1 = req.getParameter("Btn1");
         String button2 = req.getParameter("Btn2");
-        if ((button1 == null && getBtn1Result()>0) || (button2 == null && getBtn2Result()>0))  {
-            setQuestFailed();
-        } else {incStep();}
+
+        //throw new RuntimeException("Bad Response");
+
+        if ((button1 != null && button2 != null) || (button1 == null && button2 == null))  {
+            //raise error
+            throw new RuntimeException("Bad Response");
+        } else {
+            if ((button1 == null && getBtn1Result() ==VALID ) || (button2 == null && getBtn2Result() ==VALID)) {
+                setQuestFailed();
+            } else {
+                incStep();
+            }
+        }
         return getView();
     }
 
@@ -84,8 +101,8 @@ public class Quest implements Command{
             result.setStepDescription("Cannot read config "+ rp);
             result.setBtn1Text("Error");
             result.setBtn2Text("Error");
-            result.setBtn1Result(0);
-            result.setBtn2Result(0);
+            result.setBtn1Result(INVALID);
+            result.setBtn2Result(INVALID);
         }
         return result;
     }

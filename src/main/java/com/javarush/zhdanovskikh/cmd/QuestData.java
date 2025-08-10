@@ -1,8 +1,10 @@
 package com.javarush.zhdanovskikh.cmd;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+
 public class QuestData {
     private String stepDescription;
     private int btn1Result;
